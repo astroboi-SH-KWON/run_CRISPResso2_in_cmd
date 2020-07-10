@@ -26,7 +26,7 @@ class Utils:
         for process in psutil.process_iter():
             if proc_nm in process.name():
                 proc_cnt += 1
-        if proc_cnt >= max_cpu_cnt:
+        if proc_cnt > max_cpu_cnt:
             time.sleep(600)
             self.check_limit_cpu(max_cpu_cnt, proc_nm)
         else:
