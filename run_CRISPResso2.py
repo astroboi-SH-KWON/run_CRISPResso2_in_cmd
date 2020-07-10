@@ -5,8 +5,19 @@ class run_CRISPResso2:
     def __init__(self):
         self.tmp = ""
 
-    def execute (self):
-        os.system('CRISPResso {}_S{}_L001_R1_001.fastq.gz {}_S{}_L001_R2_001.fastq.gz -M 400 -m 10 -O -o {}'.
-                  format(self.file_No,self.file_No,self.file_No, self.file_No, self.output))
+    # def __init__(self, init):
+    #     self.output_dir = init[0]
+    #     self.amplicon_seq = init[1]
+    #     self.guide_seq = init[2]
+    #     self.fastq_r1 = init[3]
+    #     self.fastq_r2 = init[4]
 
+    def run_CRISPResso_fastq_r1(self, fastq_r1, guide_seq, amplicon_seq):
+        os.system('CRISPResso --fastq_r1 {} -o {} --amplicon_seq {} --guide_seq {}'.
+                  format(fastq_r1, guide_seq, amplicon_seq, guide_seq))
+        return
+
+    def run_CRISPResso_fastq_r1_r2_w_falsh(self, fastq_r1, fastq_r2, guide_seq, amplicon_seq):
+        os.system('CRISPResso --fastq_r1 {} --fastq_r2 {} -o {} --amplicon_seq {} --guide_seq {}'.
+                  format(fastq_r1, fastq_r2, guide_seq, amplicon_seq, guide_seq))
         return

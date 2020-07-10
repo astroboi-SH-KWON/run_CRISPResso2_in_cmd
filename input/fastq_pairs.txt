@@ -1,0 +1,2 @@
+fastq_r1	fastq_r2
+GE_319_Pool_S0_L001_R1_001.fastq.gz	GE_319_Pool_S0_L001_R2_001.fastq.gz
