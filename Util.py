@@ -1,3 +1,5 @@
+import psutil
+import time
 
 class Utils:
     def __init__(self):
@@ -18,3 +20,14 @@ class Utils:
                 result_list.append(tmp_arr)
 
         return result_list
+
+    def check_limit_cpu(self, max_cpu_cnt, proc_nm):
+        proc_cnt = 0
+        for process in psutil.process_iter():
+            if proc_nm in process.name():
+                proc_cnt += 1
+        if proc_cnt >= max_cpu_cnt:
+            time.sleep(600)
+            self.check_limit_cpu(max_cpu_cnt, proc_nm)
+        else:
+            return

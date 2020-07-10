@@ -33,7 +33,7 @@
       <recent name="D:\Github\run_CRISPResso2_in_cmd\barcode" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.Test">
     <configuration name="Multi_run_CRISPResso2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="run_CRISPResso2_in_cmd" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -56,8 +56,31 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="run_CRISPResso2_in_cmd" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Test" />
         <item itemvalue="Python.Multi_run_CRISPResso2" />
       </list>
     </recent_temporary>
@@ -85,7 +108,7 @@
       <option name="presentableId" value="Default" />
       <updated>1594341602271</updated>
       <workItem from="1594341606287" duration="7632000" />
-      <workItem from="1594352007746" duration="30000" />
+      <workItem from="1594352007746" duration="5961000" />
     </task>
     <servers />
   </component>
@@ -93,22 +116,22 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="973" height="571" key="GridCell.Tab.0.bottom" timestamp="1594349240988">
+    <state width="973" height="966" key="GridCell.Tab.0.bottom" timestamp="1594355735080">
       <screen x="1982" y="-414" width="1018" height="1920" />
     </state>
-    <state width="973" height="571" key="GridCell.Tab.0.bottom/0.0.1856.1080/1982.-414.1018.1920@1982.-414.1018.1920" timestamp="1594349240988" />
-    <state width="973" height="571" key="GridCell.Tab.0.center" timestamp="1594349240987">
+    <state width="973" height="966" key="GridCell.Tab.0.bottom/0.0.1856.1080/1982.-414.1018.1920@1982.-414.1018.1920" timestamp="1594355735080" />
+    <state width="973" height="966" key="GridCell.Tab.0.center" timestamp="1594355735080">
       <screen x="1982" y="-414" width="1018" height="1920" />
     </state>
-    <state width="973" height="571" key="GridCell.Tab.0.center/0.0.1856.1080/1982.-414.1018.1920@1982.-414.1018.1920" timestamp="1594349240987" />
-    <state width="973" height="571" key="GridCell.Tab.0.left" timestamp="1594349240987">
+    <state width="973" height="966" key="GridCell.Tab.0.center/0.0.1856.1080/1982.-414.1018.1920@1982.-414.1018.1920" timestamp="1594355735080" />
+    <state width="973" height="966" key="GridCell.Tab.0.left" timestamp="1594355735080">
       <screen x="1982" y="-414" width="1018" height="1920" />
     </state>
-    <state width="973" height="571" key="GridCell.Tab.0.left/0.0.1856.1080/1982.-414.1018.1920@1982.-414.1018.1920" timestamp="1594349240987" />
-    <state width="973" height="571" key="GridCell.Tab.0.right" timestamp="1594349240987">
+    <state width="973" height="966" key="GridCell.Tab.0.left/0.0.1856.1080/1982.-414.1018.1920@1982.-414.1018.1920" timestamp="1594355735080" />
+    <state width="973" height="966" key="GridCell.Tab.0.right" timestamp="1594355735080">
       <screen x="1982" y="-414" width="1018" height="1920" />
     </state>
-    <state width="973" height="571" key="GridCell.Tab.0.right/0.0.1856.1080/1982.-414.1018.1920@1982.-414.1018.1920" timestamp="1594349240987" />
+    <state width="973" height="966" key="GridCell.Tab.0.right/0.0.1856.1080/1982.-414.1018.1920@1982.-414.1018.1920" timestamp="1594355735080" />
     <state x="1991" y="187" key="SettingsEditor" timestamp="1594341728575">
       <screen x="1982" y="-414" width="1018" height="1920" />
     </state>
@@ -117,20 +140,21 @@
       <screen x="1982" y="-414" width="1018" height="1920" />
     </state>
     <state x="2182" y="369" key="com.intellij.ide.util.TipDialog/0.0.1856.1080/1982.-414.1018.1920@1982.-414.1018.1920" timestamp="1594352008161" />
-    <state x="921" y="0" width="942" height="1087" key="dock-window-1" timestamp="1594345590775">
+    <state x="902" y="0" width="812" height="1166" key="dock-window-1" timestamp="1594352467859">
       <screen x="0" y="0" width="1856" height="1080" />
     </state>
-    <state x="921" y="0" width="942" height="1087" key="dock-window-1/0.0.1856.1080/1982.-414.1018.1920@1982.-414.1018.1920" timestamp="1594345590775" />
-    <state x="-7" y="0" width="942" height="1087" key="dock-window-2" timestamp="1594345310157">
+    <state x="902" y="0" width="812" height="1166" key="dock-window-1/0.0.1856.1080/1982.-414.1018.1920@1982.-414.1018.1920" timestamp="1594352467859" />
+    <state x="911" y="0" width="812" height="1166" key="dock-window-2" timestamp="1594355429011">
       <screen x="0" y="0" width="1856" height="1080" />
     </state>
-    <state x="-7" y="0" width="942" height="1087" key="dock-window-2/0.0.1856.1080/1982.-414.1018.1920@1982.-414.1018.1920" timestamp="1594345310157" />
+    <state x="911" y="0" width="812" height="1166" key="dock-window-2/0.0.1856.1080/1982.-414.1018.1920@1982.-414.1018.1920" timestamp="1594355429011" />
     <state x="1000" y="0" width="815" height="1166" key="dock-window-3" timestamp="1594348646318">
       <screen x="0" y="0" width="1856" height="1080" />
     </state>
     <state x="1000" y="0" width="815" height="1166" key="dock-window-3/0.0.1856.1080/1982.-414.1018.1920@1982.-414.1018.1920" timestamp="1594348646318" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/run_CRISPResso2_in_cmd$Test.coverage" NAME="Test Coverage Results" MODIFIED="1594355735076" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/run_CRISPResso2_in_cmd$Multi_run_CRISPResso2.coverage" NAME="Multi_run_CRISPResso2 Coverage Results" MODIFIED="1594348287852" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
