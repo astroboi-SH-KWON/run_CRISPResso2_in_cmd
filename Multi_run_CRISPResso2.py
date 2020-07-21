@@ -13,7 +13,6 @@ import run_CRISPResso2
 WORK_DIR = os.getcwd() + "/"
 INPUT_BARCD = "input/pre_cancer_barcode.txt"
 INPUT_FASTQ = "input/fastq_pairs.txt"
-OUTPUT_PATH = "output/"
 
 TOTAL_CPU = mp.cpu_count()
 # MULTI_CNT = int(TOTAL_CPU*0.5)
@@ -37,11 +36,11 @@ def multi_processing_plan_B():
 
     for init_arr in var_list:
         util.check_limit_cpu(MULTI_CNT, PROCESS_NAME)
-        proc = Process(target=run_crispresso.run_CRISPResso_fastq_r1, args=(OUTPUT_PATH, init_arr[3], init_arr[2], init_arr[1]))
+        proc = Process(target=run_crispresso.run_CRISPResso_fastq_r1, args=(init_arr[3], init_arr[2], init_arr[1]))
         proc.start()
 
 if __name__ == '__main__':
-    start_time = time.time()
+    start_time = time.perf_counter()
     print("start >>>>>>>>>>>>>>>>>>")
     multi_processing_plan_B()
-    print("::::::::::: %.2f seconds ::::::::::::::" % (time.time() - start_time))
+    print("::::::::::: %.2f seconds ::::::::::::::" % (time.perf_counter() - start_time))

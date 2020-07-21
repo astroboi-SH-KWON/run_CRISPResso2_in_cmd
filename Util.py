@@ -17,6 +17,7 @@ class Utils:
                     break
 
                 tmp_arr = tmp_line.split("\t")
+
                 result_list.append(tmp_arr)
 
         return result_list
@@ -31,3 +32,34 @@ class Utils:
             self.check_limit_cpu(max_cpu_cnt, proc_nm)
         else:
             return
+
+    def check_limit_cpu_test(self, max_cpu_cnt, proc_nm):
+        proc_cnt = 0
+        for process in psutil.process_iter():
+            if proc_nm in process.name():
+                # self.kill_done_process(process)
+                proc_cnt += 1
+        if proc_cnt > max_cpu_cnt:
+            time.sleep(3)
+            self.check_limit_cpu(max_cpu_cnt, proc_nm)
+        else:
+            return
+
+    def kill_done_process(self, process):
+        try:
+            process_dict = process.as_dict()
+            print "cpu_percent : ", process.cpu_percent()
+            print "cmdline : ", process.cmdline()
+            print "pid : ", process.pid
+            print "parent : ", process.parent()
+            print "connections : ", process.connections()
+            # print "cpu_affinity : ", process.
+            print "cpu_affinity : ", process.wait()
+            # print "cpu_affinity : ", process.
+            # print "cpu_affinity : ", process.
+            # print "cpu_affinity : ", process.
+            # print "cpu_affinity : ", process.
+            print "memory_percent : ", process.memory_percent()
+            # print process_dict
+        except psutil.NoSuchProcess :
+            print "psutil.NoSuchProcess"

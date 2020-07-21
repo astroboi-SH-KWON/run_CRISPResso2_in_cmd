@@ -1,7 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="971e8e64-be29-4182-bdd8-c81f916e634d" name="Default Changelist" comment="" />
+    <list default="true" id="971e8e64-be29-4182-bdd8-c81f916e634d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/run_CRISPResso2_in_cmd.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/run_CRISPResso2_in_cmd.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LogicPrep.py" beforeDir="false" afterPath="$PROJECT_DIR$/LogicPrep.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Multi_run_CRISPResso2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Multi_run_CRISPResso2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Util.py" beforeDir="false" afterPath="$PROJECT_DIR$/Util.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input/pre_cancer_barcode.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input/pre_cancer_barcode.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_CRISPResso2.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_CRISPResso2.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,10 +48,10 @@
   <component name="ProjectId" id="1eTNPwS6qJQXGKM8q5cxhe0K3fB" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -85,18 +113,6 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -108,42 +124,90 @@
       <option name="presentableId" value="Default" />
       <updated>1594341602271</updated>
       <workItem from="1594341606287" duration="7632000" />
-      <workItem from="1594352007746" duration="6504000" />
+      <workItem from="1594352007746" duration="14458000" />
+      <workItem from="1594597447369" duration="601000" />
+      <workItem from="1594606976051" duration="4398000" />
+      <workItem from="1594682734440" duration="2309000" />
+      <workItem from="1594712965014" duration="3433000" />
+      <workItem from="1594771534029" duration="3112000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state width="973" height="966" key="GridCell.Tab.0.bottom" timestamp="1594355735080">
+    <state width="284" height="442" key="Diff.GoToChangePopup" timestamp="1595207559398">
+      <screen x="1920" y="-465" width="1080" height="1890" />
+    </state>
+    <state width="284" height="442" key="Diff.GoToChangePopup/0.0.1858.1080/1920.-465.1080.1890@1920.-465.1080.1890" timestamp="1595207559398" />
+    <state x="791" y="98" width="896" height="1706" maximized="true" key="DiffContextDialog" timestamp="1595208041684">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state x="791" y="98" width="896" height="1706" maximized="true" key="DiffContextDialog/0.0.1858.1080/1920.-465.1080.1890@1920.-465.1080.1890" timestamp="1595208041684" />
+    <state x="2224" y="225" key="FileChooserDialogImpl" timestamp="1595207316798">
+      <screen x="1920" y="-465" width="1080" height="1890" />
+    </state>
+    <state x="2269" y="287" key="FileChooserDialogImpl/0.0.1856.1080/1982.-414.1018.1920@1982.-414.1018.1920" timestamp="1594713283442" />
+    <state x="2224" y="225" key="FileChooserDialogImpl/0.0.1858.1080/1920.-465.1080.1890@1920.-465.1080.1890" timestamp="1595207316798" />
+    <state width="903" height="562" key="GridCell.Tab.0.bottom" timestamp="1595228727104">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state width="973" height="771" key="GridCell.Tab.0.bottom/0.0.1856.1080/1982.-414.1018.1920@1982.-414.1018.1920" timestamp="1594374450480" />
+    <state width="903" height="562" key="GridCell.Tab.0.bottom/0.0.1858.1080/1920.-465.1080.1890@0.0.1858.1080" timestamp="1595228727104" />
+    <state width="1057" height="562" key="GridCell.Tab.0.bottom/0.0.1858.1080/1920.-465.1080.1890@1920.-465.1080.1890" timestamp="1595208463579" />
+    <state width="903" height="562" key="GridCell.Tab.0.center" timestamp="1595228727104">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state width="973" height="771" key="GridCell.Tab.0.center/0.0.1856.1080/1982.-414.1018.1920@1982.-414.1018.1920" timestamp="1594374450480" />
+    <state width="903" height="562" key="GridCell.Tab.0.center/0.0.1858.1080/1920.-465.1080.1890@0.0.1858.1080" timestamp="1595228727104" />
+    <state width="1057" height="562" key="GridCell.Tab.0.center/0.0.1858.1080/1920.-465.1080.1890@1920.-465.1080.1890" timestamp="1595208463579" />
+    <state width="903" height="562" key="GridCell.Tab.0.left" timestamp="1595228727104">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state width="973" height="771" key="GridCell.Tab.0.left/0.0.1856.1080/1982.-414.1018.1920@1982.-414.1018.1920" timestamp="1594374450480" />
+    <state width="903" height="562" key="GridCell.Tab.0.left/0.0.1858.1080/1920.-465.1080.1890@0.0.1858.1080" timestamp="1595228727104" />
+    <state width="1057" height="562" key="GridCell.Tab.0.left/0.0.1858.1080/1920.-465.1080.1890@1920.-465.1080.1890" timestamp="1595208463579" />
+    <state width="903" height="562" key="GridCell.Tab.0.right" timestamp="1595228727104">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state width="973" height="771" key="GridCell.Tab.0.right/0.0.1856.1080/1982.-414.1018.1920@1982.-414.1018.1920" timestamp="1594374450480" />
+    <state width="903" height="562" key="GridCell.Tab.0.right/0.0.1858.1080/1920.-465.1080.1890@0.0.1858.1080" timestamp="1595228727104" />
+    <state width="1057" height="562" key="GridCell.Tab.0.right/0.0.1858.1080/1920.-465.1080.1890@1920.-465.1080.1890" timestamp="1595208463579" />
+    <state x="594" y="118" key="MergeDialog" timestamp="1595207709776">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state x="594" y="118" key="MergeDialog/0.0.1858.1080/1920.-465.1080.1890@1920.-465.1080.1890" timestamp="1595207709776" />
+    <state x="1930" y="127" key="SettingsEditor" timestamp="1595207329060">
+      <screen x="1920" y="-465" width="1080" height="1890" />
+    </state>
+    <state x="1991" y="187" key="SettingsEditor/0.0.1856.1080/1982.-414.1018.1920@1982.-414.1018.1920" timestamp="1594365016541" />
+    <state x="1930" y="127" key="SettingsEditor/0.0.1858.1080/1920.-465.1080.1890@1920.-465.1080.1890" timestamp="1595207329060" />
+    <state x="2306" y="395" key="VCS.ChangelistChooser" timestamp="1595207638185">
+      <screen x="1920" y="-465" width="1080" height="1890" />
+    </state>
+    <state x="2306" y="395" key="VCS.ChangelistChooser/0.0.1858.1080/1920.-465.1080.1890@1920.-465.1080.1890" timestamp="1595207638185" />
+    <state x="2182" y="369" key="com.intellij.ide.util.TipDialog" timestamp="1594766246075">
       <screen x="1982" y="-414" width="1018" height="1920" />
     </state>
-    <state width="973" height="966" key="GridCell.Tab.0.bottom/0.0.1856.1080/1982.-414.1018.1920@1982.-414.1018.1920" timestamp="1594355735080" />
-    <state width="973" height="966" key="GridCell.Tab.0.center" timestamp="1594355735080">
-      <screen x="1982" y="-414" width="1018" height="1920" />
+    <state x="2182" y="369" key="com.intellij.ide.util.TipDialog/0.0.1856.1080/1982.-414.1018.1920@1982.-414.1018.1920" timestamp="1594766246075" />
+    <state x="922" y="0" width="943" height="1087" key="dock-window-1" timestamp="1595208041685">
+      <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state width="973" height="966" key="GridCell.Tab.0.center/0.0.1856.1080/1982.-414.1018.1920@1982.-414.1018.1920" timestamp="1594355735080" />
-    <state width="973" height="966" key="GridCell.Tab.0.left" timestamp="1594355735080">
-      <screen x="1982" y="-414" width="1018" height="1920" />
-    </state>
-    <state width="973" height="966" key="GridCell.Tab.0.left/0.0.1856.1080/1982.-414.1018.1920@1982.-414.1018.1920" timestamp="1594355735080" />
-    <state width="973" height="966" key="GridCell.Tab.0.right" timestamp="1594355735080">
-      <screen x="1982" y="-414" width="1018" height="1920" />
-    </state>
-    <state width="973" height="966" key="GridCell.Tab.0.right/0.0.1856.1080/1982.-414.1018.1920@1982.-414.1018.1920" timestamp="1594355735080" />
-    <state x="1991" y="187" key="SettingsEditor" timestamp="1594341728575">
-      <screen x="1982" y="-414" width="1018" height="1920" />
-    </state>
-    <state x="1991" y="187" key="SettingsEditor/0.0.1856.1080/1982.-414.1018.1920@1982.-414.1018.1920" timestamp="1594341728575" />
-    <state x="2182" y="369" key="com.intellij.ide.util.TipDialog" timestamp="1594352008161">
-      <screen x="1982" y="-414" width="1018" height="1920" />
-    </state>
-    <state x="2182" y="369" key="com.intellij.ide.util.TipDialog/0.0.1856.1080/1982.-414.1018.1920@1982.-414.1018.1920" timestamp="1594352008161" />
-    <state x="902" y="0" width="812" height="1166" key="dock-window-1" timestamp="1594352467859">
-      <screen x="0" y="0" width="1856" height="1080" />
-    </state>
-    <state x="902" y="0" width="812" height="1166" key="dock-window-1/0.0.1856.1080/1982.-414.1018.1920@1982.-414.1018.1920" timestamp="1594352467859" />
+    <state x="941" y="0" width="804" height="1166" maximized="true" key="dock-window-1/0.0.1856.1080/1982.-414.1018.1920@1982.-414.1018.1920" timestamp="1594628803708" />
+    <state x="922" y="0" width="943" height="1087" key="dock-window-1/0.0.1858.1080/1920.-465.1080.1890@1920.-465.1080.1890" timestamp="1595208041685" />
     <state x="911" y="0" width="812" height="1166" key="dock-window-2" timestamp="1594355429011">
       <screen x="0" y="0" width="1856" height="1080" />
     </state>
@@ -152,9 +216,5 @@
       <screen x="0" y="0" width="1856" height="1080" />
     </state>
     <state x="1000" y="0" width="815" height="1166" key="dock-window-3/0.0.1856.1080/1982.-414.1018.1920@1982.-414.1018.1920" timestamp="1594348646318" />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/run_CRISPResso2_in_cmd$Test.coverage" NAME="Test Coverage Results" MODIFIED="1594355735076" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/run_CRISPResso2_in_cmd$Multi_run_CRISPResso2.coverage" NAME="Multi_run_CRISPResso2 Coverage Results" MODIFIED="1594348287852" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
