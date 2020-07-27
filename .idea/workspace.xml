@@ -19,8 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="971e8e64-be29-4182-bdd8-c81f916e634d" name="Default Changelist" comment="sync">
-      <change beforePath="$PROJECT_DIR$/run_CRISPResso2.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_CRISPResso2.py" afterDir="false" />
+    <list default="true" id="971e8e64-be29-4182-bdd8-c81f916e634d" name="Default Changelist" comment="pass in run_CRISPResso2.__init__">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Multi_run_CRISPResso2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Multi_run_CRISPResso2.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +55,7 @@
       <recent name="D:\Github\run_CRISPResso2_in_cmd\barcode" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Test">
+  <component name="RunManager" selected="Python.Multi_run_CRISPResso2">
     <configuration name="Multi_run_CRISPResso2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="run_CRISPResso2_in_cmd" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -101,8 +102,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Test" />
         <item itemvalue="Python.Multi_run_CRISPResso2" />
+        <item itemvalue="Python.Test" />
       </list>
     </recent_temporary>
   </component>
@@ -138,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595810381121</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="pass in run_CRISPResso2.__init__">
+      <created>1595810593077</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1595810593077</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,7 +167,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ing" />
     <MESSAGE value="sync" />
-    <option name="LAST_COMMIT_MESSAGE" value="sync" />
+    <MESSAGE value="pass in run_CRISPResso2.__init__" />
+    <option name="LAST_COMMIT_MESSAGE" value="pass in run_CRISPResso2.__init__" />
   </component>
   <component name="WindowStateProjectService">
     <state width="284" height="442" key="Diff.GoToChangePopup" timestamp="1595207559398">
@@ -175,29 +184,29 @@
     </state>
     <state x="2269" y="287" key="FileChooserDialogImpl/0.0.1856.1080/1982.-414.1018.1920@1982.-414.1018.1920" timestamp="1594713283442" />
     <state x="2224" y="225" key="FileChooserDialogImpl/0.0.1858.1080/1920.-465.1080.1890@1920.-465.1080.1890" timestamp="1595400175211" />
-    <state width="903" height="300" key="GridCell.Tab.0.bottom" timestamp="1595413556080">
+    <state width="1835" height="300" key="GridCell.Tab.0.bottom" timestamp="1595822678565">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state width="973" height="771" key="GridCell.Tab.0.bottom/0.0.1856.1080/1982.-414.1018.1920@1982.-414.1018.1920" timestamp="1594374450480" />
-    <state width="903" height="300" key="GridCell.Tab.0.bottom/0.0.1858.1080/1920.-465.1080.1890@0.0.1858.1080" timestamp="1595413556080" />
+    <state width="1835" height="300" key="GridCell.Tab.0.bottom/0.0.1858.1080/1920.-465.1080.1890@0.0.1858.1080" timestamp="1595822678565" />
     <state width="1057" height="778" key="GridCell.Tab.0.bottom/0.0.1858.1080/1920.-465.1080.1890@1920.-465.1080.1890" timestamp="1595384064754" />
-    <state width="903" height="300" key="GridCell.Tab.0.center" timestamp="1595413556080">
+    <state width="1835" height="300" key="GridCell.Tab.0.center" timestamp="1595822678565">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state width="973" height="771" key="GridCell.Tab.0.center/0.0.1856.1080/1982.-414.1018.1920@1982.-414.1018.1920" timestamp="1594374450480" />
-    <state width="903" height="300" key="GridCell.Tab.0.center/0.0.1858.1080/1920.-465.1080.1890@0.0.1858.1080" timestamp="1595413556080" />
+    <state width="1835" height="300" key="GridCell.Tab.0.center/0.0.1858.1080/1920.-465.1080.1890@0.0.1858.1080" timestamp="1595822678565" />
     <state width="1057" height="778" key="GridCell.Tab.0.center/0.0.1858.1080/1920.-465.1080.1890@1920.-465.1080.1890" timestamp="1595384064754" />
-    <state width="903" height="300" key="GridCell.Tab.0.left" timestamp="1595413556080">
+    <state width="1835" height="300" key="GridCell.Tab.0.left" timestamp="1595822678565">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state width="973" height="771" key="GridCell.Tab.0.left/0.0.1856.1080/1982.-414.1018.1920@1982.-414.1018.1920" timestamp="1594374450480" />
-    <state width="903" height="300" key="GridCell.Tab.0.left/0.0.1858.1080/1920.-465.1080.1890@0.0.1858.1080" timestamp="1595413556080" />
+    <state width="1835" height="300" key="GridCell.Tab.0.left/0.0.1858.1080/1920.-465.1080.1890@0.0.1858.1080" timestamp="1595822678565" />
     <state width="1057" height="778" key="GridCell.Tab.0.left/0.0.1858.1080/1920.-465.1080.1890@1920.-465.1080.1890" timestamp="1595384064754" />
-    <state width="903" height="300" key="GridCell.Tab.0.right" timestamp="1595413556080">
+    <state width="1835" height="300" key="GridCell.Tab.0.right" timestamp="1595822678565">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state width="973" height="771" key="GridCell.Tab.0.right/0.0.1856.1080/1982.-414.1018.1920@1982.-414.1018.1920" timestamp="1594374450480" />
-    <state width="903" height="300" key="GridCell.Tab.0.right/0.0.1858.1080/1920.-465.1080.1890@0.0.1858.1080" timestamp="1595413556080" />
+    <state width="1835" height="300" key="GridCell.Tab.0.right/0.0.1858.1080/1920.-465.1080.1890@0.0.1858.1080" timestamp="1595822678565" />
     <state width="1057" height="778" key="GridCell.Tab.0.right/0.0.1858.1080/1920.-465.1080.1890@1920.-465.1080.1890" timestamp="1595384064754" />
     <state x="594" y="118" key="MergeDialog" timestamp="1595207709776">
       <screen x="0" y="0" width="1858" height="1080" />
@@ -212,19 +221,19 @@
       <screen x="1920" y="-465" width="1080" height="1890" />
     </state>
     <state x="2306" y="395" key="VCS.ChangelistChooser/0.0.1858.1080/1920.-465.1080.1890@1920.-465.1080.1890" timestamp="1595207638185" />
-    <state x="2051" y="212" key="Vcs.Push.Dialog.v2" timestamp="1595810402238">
+    <state x="2051" y="212" key="Vcs.Push.Dialog.v2" timestamp="1595810601361">
       <screen x="1920" y="-465" width="1080" height="1890" />
     </state>
-    <state x="2051" y="212" key="Vcs.Push.Dialog.v2/0.0.1858.1080/1920.-465.1080.1890@1920.-465.1080.1890" timestamp="1595810402238" />
+    <state x="2051" y="212" key="Vcs.Push.Dialog.v2/0.0.1858.1080/1920.-465.1080.1890@1920.-465.1080.1890" timestamp="1595810601361" />
     <state x="2182" y="369" key="com.intellij.ide.util.TipDialog" timestamp="1594766246075">
       <screen x="1982" y="-414" width="1018" height="1920" />
     </state>
     <state x="2182" y="369" key="com.intellij.ide.util.TipDialog/0.0.1856.1080/1982.-414.1018.1920@1982.-414.1018.1920" timestamp="1594766246075" />
-    <state x="922" y="0" width="943" height="1087" key="dock-window-1" timestamp="1595208041685">
+    <state x="1017" y="0" width="842" height="1167" key="dock-window-1" timestamp="1595822835404">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="941" y="0" width="804" height="1166" maximized="true" key="dock-window-1/0.0.1856.1080/1982.-414.1018.1920@1982.-414.1018.1920" timestamp="1594628803708" />
-    <state x="922" y="0" width="943" height="1087" key="dock-window-1/0.0.1858.1080/1920.-465.1080.1890@1920.-465.1080.1890" timestamp="1595208041685" />
+    <state x="1017" y="0" width="842" height="1167" key="dock-window-1/0.0.1858.1080/1920.-465.1080.1890@1920.-465.1080.1890" timestamp="1595822835404" />
     <state x="911" y="0" width="812" height="1166" key="dock-window-2" timestamp="1594355429011">
       <screen x="0" y="0" width="1856" height="1080" />
     </state>
