@@ -3,7 +3,7 @@ import os
 
 class run_CRISPResso2:
     def __init__(self):
-        self.tmp = ""
+        pass
 
     # def __init__(self, init):
     #     self.output_dir = init[0]

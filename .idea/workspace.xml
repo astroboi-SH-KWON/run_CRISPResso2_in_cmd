@@ -19,10 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="971e8e64-be29-4182-bdd8-c81f916e634d" name="Default Changelist" comment="ing">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Multi_run_CRISPResso2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Multi_run_CRISPResso2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test.py" afterDir="false" />
+    <list default="true" id="971e8e64-be29-4182-bdd8-c81f916e634d" name="Default Changelist" comment="sync">
       <change beforePath="$PROJECT_DIR$/run_CRISPResso2.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_CRISPResso2.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -134,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595309869721</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="sync">
+      <created>1595810381121</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1595810381121</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,7 +158,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ing" />
-    <option name="LAST_COMMIT_MESSAGE" value="ing" />
+    <MESSAGE value="sync" />
+    <option name="LAST_COMMIT_MESSAGE" value="sync" />
   </component>
   <component name="WindowStateProjectService">
     <state width="284" height="442" key="Diff.GoToChangePopup" timestamp="1595207559398">
@@ -207,10 +212,10 @@
       <screen x="1920" y="-465" width="1080" height="1890" />
     </state>
     <state x="2306" y="395" key="VCS.ChangelistChooser/0.0.1858.1080/1920.-465.1080.1890@1920.-465.1080.1890" timestamp="1595207638185" />
-    <state x="2051" y="212" key="Vcs.Push.Dialog.v2" timestamp="1595309877913">
+    <state x="2051" y="212" key="Vcs.Push.Dialog.v2" timestamp="1595810402238">
       <screen x="1920" y="-465" width="1080" height="1890" />
     </state>
-    <state x="2051" y="212" key="Vcs.Push.Dialog.v2/0.0.1858.1080/1920.-465.1080.1890@1920.-465.1080.1890" timestamp="1595309877913" />
+    <state x="2051" y="212" key="Vcs.Push.Dialog.v2/0.0.1858.1080/1920.-465.1080.1890@1920.-465.1080.1890" timestamp="1595810402238" />
     <state x="2182" y="369" key="com.intellij.ide.util.TipDialog" timestamp="1594766246075">
       <screen x="1982" y="-414" width="1018" height="1920" />
     </state>
