@@ -21,3 +21,8 @@ class run_CRISPResso2:
         os.system('CRISPResso --fastq_r1 {} --fastq_r2 {} -o {} --amplicon_seq {} --guide_seq {}'.
                   format(fastq_r1, fastq_r2, output_path + guide_seq, amplicon_seq, guide_seq))
         return
+
+    def run_CRISPResso_fastq_r1_r2_w_falsh_extra_opt(self, output_path, guide_seq, amplicon_seq, fastq_r1, fastq_r2):
+        os.system('CRISPResso --fastq_r1 {} --fastq_r2 {} -o {} --amplicon_seq {} --guide_seq {} --exclude_bp_from_left 45'.
+                  format(fastq_r1, fastq_r2, output_path + guide_seq, amplicon_seq, guide_seq))
+        return
