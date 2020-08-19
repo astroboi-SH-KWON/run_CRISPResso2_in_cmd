@@ -19,10 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="971e8e64-be29-4182-bdd8-c81f916e634d" name="Default Changelist" comment="change input file">
+    <list default="true" id="971e8e64-be29-4182-bdd8-c81f916e634d" name="Default Changelist" comment="trying option &quot;--exclude_bp_from_left 45&quot;&#10;run_CRISPResso2.run_CRISPResso_fastq_r1_r2_w_falsh_extra_opt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Multi_run_CRISPResso2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Multi_run_CRISPResso2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input/var_list.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input/var_list.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run_CRISPResso2.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_CRISPResso2.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -162,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595823847636</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="trying option &quot;--exclude_bp_from_left 45&quot;&#10;run_CRISPResso2.run_CRISPResso_fastq_r1_r2_w_falsh_extra_opt">
+      <created>1596173556031</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1596173556031</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,7 +191,8 @@
     <MESSAGE value="sync" />
     <MESSAGE value="pass in run_CRISPResso2.__init__" />
     <MESSAGE value="change input file" />
-    <option name="LAST_COMMIT_MESSAGE" value="change input file" />
+    <MESSAGE value="trying option &quot;--exclude_bp_from_left 45&quot;&#10;run_CRISPResso2.run_CRISPResso_fastq_r1_r2_w_falsh_extra_opt" />
+    <option name="LAST_COMMIT_MESSAGE" value="trying option &quot;--exclude_bp_from_left 45&quot;&#10;run_CRISPResso2.run_CRISPResso_fastq_r1_r2_w_falsh_extra_opt" />
   </component>
   <component name="WindowStateProjectService">
     <state width="284" height="442" key="Diff.GoToChangePopup" timestamp="1595207559398">
@@ -196,11 +203,15 @@
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="791" y="98" width="896" height="1706" maximized="true" key="DiffContextDialog/0.0.1858.1080/1920.-465.1080.1890@1920.-465.1080.1890" timestamp="1595208041684" />
-    <state x="2224" y="225" key="FileChooserDialogImpl" timestamp="1595400175211">
+    <state x="2224" y="225" key="FileChooserDialogImpl" timestamp="1596424155596">
       <screen x="1920" y="-465" width="1080" height="1890" />
     </state>
     <state x="2269" y="287" key="FileChooserDialogImpl/0.0.1856.1080/1982.-414.1018.1920@1982.-414.1018.1920" timestamp="1594713283442" />
-    <state x="2224" y="225" key="FileChooserDialogImpl/0.0.1858.1080/1920.-465.1080.1890@1920.-465.1080.1890" timestamp="1595400175211" />
+    <state x="2224" y="225" key="FileChooserDialogImpl/0.0.1858.1080/1920.-465.1080.1890@1920.-465.1080.1890" timestamp="1596424155596" />
+    <state x="2178" y="345" key="Github.CreatePullRequestDialog" timestamp="1596424023754">
+      <screen x="1920" y="-465" width="1080" height="1890" />
+    </state>
+    <state x="2178" y="345" key="Github.CreatePullRequestDialog/0.0.1858.1080/1920.-465.1080.1890@1920.-465.1080.1890" timestamp="1596424023754" />
     <state width="1057" height="300" key="GridCell.Tab.0.bottom" timestamp="1595838596096">
       <screen x="1920" y="-465" width="1080" height="1890" />
     </state>
@@ -238,18 +249,19 @@
       <screen x="1920" y="-465" width="1080" height="1890" />
     </state>
     <state x="2306" y="395" key="VCS.ChangelistChooser/0.0.1858.1080/1920.-465.1080.1890@1920.-465.1080.1890" timestamp="1595207638185" />
-    <state x="2051" y="212" key="Vcs.Push.Dialog.v2" timestamp="1595823856558">
+    <state x="2051" y="212" key="Vcs.Push.Dialog.v2" timestamp="1596173564543">
       <screen x="1920" y="-465" width="1080" height="1890" />
     </state>
-    <state x="2051" y="212" key="Vcs.Push.Dialog.v2/0.0.1858.1080/1920.-465.1080.1890@1920.-465.1080.1890" timestamp="1595823856558" />
+    <state x="2051" y="212" key="Vcs.Push.Dialog.v2/0.0.1858.1080/1920.-465.1080.1890@1920.-465.1080.1890" timestamp="1596173564543" />
     <state x="2182" y="369" key="com.intellij.ide.util.TipDialog" timestamp="1594766246075">
       <screen x="1982" y="-414" width="1018" height="1920" />
     </state>
     <state x="2182" y="369" key="com.intellij.ide.util.TipDialog/0.0.1856.1080/1982.-414.1018.1920@1982.-414.1018.1920" timestamp="1594766246075" />
-    <state x="1017" y="0" width="842" height="1167" key="dock-window-1" timestamp="1595822835404">
+    <state x="968" y="0" width="906" height="1167" maximized="true" key="dock-window-1" timestamp="1597807954269">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="941" y="0" width="804" height="1166" maximized="true" key="dock-window-1/0.0.1856.1080/1982.-414.1018.1920@1982.-414.1018.1920" timestamp="1594628803708" />
+    <state x="968" y="0" width="906" height="1167" maximized="true" key="dock-window-1/0.0.1858.1080/1920.-135.1080.1890@1920.-135.1080.1890" timestamp="1597807954269" />
     <state x="1017" y="0" width="842" height="1167" key="dock-window-1/0.0.1858.1080/1920.-465.1080.1890@1920.-465.1080.1890" timestamp="1595822835404" />
     <state x="911" y="0" width="812" height="1166" key="dock-window-2" timestamp="1594355429011">
       <screen x="0" y="0" width="1856" height="1080" />

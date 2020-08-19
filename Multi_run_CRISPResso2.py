@@ -22,6 +22,8 @@ TOTAL_CPU = mp.cpu_count()
 # MULTI_CNT = 5
 # PROCESS_NAME = "python"
 DELAY_MIN = 60
+CONST1 = "AGTACGTACGAGTC"  # 14 bp
+CONST2 = "GTACTCGCAGTAGTC"  # 15 bp
 ############### end setting env ################
 
 def multi_processing_plan_B():
@@ -35,8 +37,8 @@ def multi_processing_plan_B():
     var_list = util.read_tb_txt_wout_header(WORK_DIR + INPUT_VAR_LIST)
 
     for init_arr in var_list:
-        proc = Process(target=run_crispresso.run_CRISPResso_fastq_r1_r2_w_falsh,
-                       args=(OUTPUT_PATH, init_arr[4], init_arr[3], FASTQ + init_arr[1] + ".gz", FASTQ + init_arr[2] + ".gz"))
+        proc = Process(target=run_crispresso.run_CRISPResso_fastq_r1_r2_w_flash,
+                       args=(OUTPUT_PATH, FASTQ + init_arr[1] + ".gz", FASTQ + init_arr[2] + ".gz", init_arr[3], init_arr[4]))
         proc.start()
         time.sleep(60*DELAY_MIN)
 
@@ -51,13 +53,13 @@ def multi_processing_plan_C():
     var_list = util.read_tb_txt_wout_header(WORK_DIR + INPUT_VAR_LIST)
 
     for init_arr in var_list:
-        proc = Process(target=run_crispresso.run_CRISPResso_fastq_r1_r2_w_falsh_extra_opt,
-                       args=(OUTPUT_PATH, init_arr[4], init_arr[3], FASTQ + init_arr[1] + ".gz", FASTQ + init_arr[2] + ".gz"))
+        proc = Process(target=run_crispresso.run_CRISPResso_fastq_r1_r2_w_flash_extra_opt, args=(
+        OUTPUT_PATH, FASTQ + init_arr[1] + ".gz", FASTQ + init_arr[2] + ".gz", init_arr[3], init_arr[4], CONST2))
         proc.start()
         time.sleep(60*DELAY_MIN)
 
 if __name__ == '__main__':
     start_time = time.time()
     print("start >>>>>>>>>>>>>>>>>>")
-    multi_processing_plan_C()
+    multi_processing_plan_B()
     print("::::::::::: %.2f seconds ::::::::::::::" % (time.time() - start_time))
