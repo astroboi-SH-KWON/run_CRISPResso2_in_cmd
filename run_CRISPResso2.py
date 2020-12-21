@@ -14,12 +14,12 @@ class run_CRISPResso2:
 
     def run_CRISPResso_fastq_r1(self, output_path, fastq_r1, amplicon_seq, guide_seq):
         os.system('CRISPResso --fastq_r1 {} -o {} --amplicon_seq {} --guide_seq {}'.
-                  format(fastq_r1, output_path + guide_seq, amplicon_seq, guide_seq))
+                  format(fastq_r1, output_path + guide_seq, amplicon_seq.strip(), guide_seq.strip()))
         return
 
     def run_CRISPResso_fastq_r1_r2_w_flash(self, output_path, fastq_r1, fastq_r2, amplicon_seq, guide_seq):
         os.system('CRISPResso --fastq_r1 {} --fastq_r2 {} -o {} --amplicon_seq {} --guide_seq {}'.
-                  format(fastq_r1, fastq_r2, output_path + guide_seq, amplicon_seq, guide_seq))
+                  format(fastq_r1, fastq_r2, output_path + guide_seq, amplicon_seq.strip(), guide_seq.strip()))
         return
 
     """
@@ -29,5 +29,5 @@ class run_CRISPResso2:
     """
     def run_CRISPResso_fastq_r1_r2_w_flash_extra_opt(self, output_path, fastq_r1, fastq_r2, amplicon_seq, guide_seq, const):
         os.system('CRISPResso --fastq_r1 {} --fastq_r2 {} -o {} --amplicon_seq {} --guide_seq {} --prime_editing_pegRNA_scaffold_seq {}'.
-                  format(fastq_r1, fastq_r2, output_path + guide_seq, amplicon_seq, guide_seq, const))
+                  format(fastq_r1, fastq_r2, output_path + guide_seq, amplicon_seq.strip(), guide_seq.strip(), const))
         return

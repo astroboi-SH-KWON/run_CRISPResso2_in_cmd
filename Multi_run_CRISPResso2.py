@@ -2,12 +2,9 @@ import time
 import os
 import multiprocessing as mp
 from multiprocessing import Process
-import numpy as np
 
 
 import Util
-import LogicPrep
-import Logic
 import run_CRISPResso2
 ############### start to set env ###############
 WORK_DIR = os.getcwd() + "/"
@@ -28,7 +25,6 @@ CONST2 = "GTACTCGCAGTAGTC"  # 15 bp
 
 def multi_processing_plan_B():
     util = Util.Utils()
-    logic_prep = LogicPrep.LogicPreps()
     run_crispresso = run_CRISPResso2.run_CRISPResso2()
 
 
@@ -45,7 +41,6 @@ def multi_processing_plan_B():
 # extract FASTQ files without .gz ext
 def multi_processing_plan_B_wo_gz():
     util = Util.Utils()
-    logic_prep = LogicPrep.LogicPreps()
     run_crispresso = run_CRISPResso2.run_CRISPResso2()
 
 
@@ -62,7 +57,6 @@ def multi_processing_plan_B_wo_gz():
 
 def multi_processing_plan_C():
     util = Util.Utils()
-    logic_prep = LogicPrep.LogicPreps()
     run_crispresso = run_CRISPResso2.run_CRISPResso2()
 
 
@@ -76,9 +70,18 @@ def multi_processing_plan_C():
         proc.start()
         time.sleep(60*DELAY_MIN)
 
+
+def run_solo_CRISPResso2():
+    run_crispresso = run_CRISPResso2.run_CRISPResso2()
+    init_arr = ['Trp53', '253_1_S6_L001_R1_001.fastq', '253_1_S6_L001_R2_001.fastq', 'CCTACACTTTCAGAATTTAATTTCCCTACTGGATGTCCCACCTTCTTTTTATTCTACCCTTTCCTATAAGCCATAGGGGTTTGTTTGTTTGTATGTTTTTTAATTGACAAGTTATGCATCCATACAGTACACAATCTCTTCTCTCTACAGATGACTGCCATGGAGGAGTCACAGTCGGATATCAGCCTCGAGCTCCCTCTGAGCCAGGAGACATTTTCAGGCTTATGGAAACTGTGAGTGGATCTT', 'TGCCATGGAGGAGTCACAGT']
+    run_crispresso.run_CRISPResso_fastq_r1_r2_w_flash(OUTPUT_PATH, FASTQ + init_arr[1], FASTQ + init_arr[2],
+                                                      init_arr[3], init_arr[4])
+
+
 if __name__ == '__main__':
     start_time = time.time()
     print("start >>>>>>>>>>>>>>>>>>")
+    # run_solo_CRISPResso2()
     # multi_processing_plan_B()
     multi_processing_plan_B_wo_gz()
     print("::::::::::: %.2f seconds ::::::::::::::" % (time.time() - start_time))
