@@ -31,3 +31,19 @@ class run_CRISPResso2:
         os.system('CRISPResso --fastq_r1 {} --fastq_r2 {} -o {} --amplicon_seq {} --guide_seq {} --prime_editing_pegRNA_scaffold_seq {}'.
                   format(fastq_r1, fastq_r2, output_path + guide_seq, amplicon_seq.strip(), guide_seq.strip(), const))
         return
+
+    """
+    -amas or --amplicon_min_alignment_score: 
+        Amplicon Minimum Alignment Score; score between 0 and 100; 
+        sequences must have at least this homology score with the amplicon to be aligned 
+        (can be comma-separated list of multiple scores, corresponding to amplicon sequences given in --amplicon_seq) 
+        After reads are aligned to a reference sequence, the homology is calculated as the number of bp they have in common. 
+        If the aligned read has a homology less than this parameter, it is discarded. 
+        This is useful for filtering erroneous reads that do not align to the target amplicon, 
+        for example arising from alternate primer locations. (default: 60)
+    """
+    def run_CRISPResso_fastq_r1_r2_w_flash_for_large_indel(self, output_path, fastq_r1, fastq_r2, amplicon_seq, guide_seq, min_align_scr=60):
+        os.system(
+            'CRISPResso --fastq_r1 {} --fastq_r2 {} -o {} --amplicon_seq {} --guide_seq {} --amplicon_min_alignment_score {}'.format(
+                fastq_r1, fastq_r2, output_path + guide_seq, amplicon_seq.strip(), guide_seq.strip(), min_align_scr))
+        return
