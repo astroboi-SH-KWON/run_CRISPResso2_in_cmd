@@ -67,7 +67,7 @@ def multi_processing_plan_B_wo_gz_with_amplicon_min_alignment_score():
 
     for init_arr in var_list:
         proc = Process(target=run_crispresso.run_CRISPResso_fastq_r1_r2_w_flash_for_large_indel, args=(
-        OUTPUT_PATH + init_arr[5] + '/', FASTQ + init_arr[1], FASTQ + init_arr[2], init_arr[3], init_arr[4], 40))
+        OUTPUT_PATH + init_arr[5] + '/', FASTQ + init_arr[1], FASTQ + init_arr[2], init_arr[3], init_arr[4], 50))
         proc.start()
         time.sleep(60*DELAY_MIN)
 
@@ -87,19 +87,28 @@ def multi_processing_plan_C():
         time.sleep(60*DELAY_MIN)
 
 
-def run_solo_CRISPResso2():
-    print 'run_solo_CRISPResso2()'
+def run_solo_CRISPResso2_w_flash():
+    print 'run_solo_CRISPResso2_w_flash()'
     run_crispresso = run_CRISPResso2.run_CRISPResso2()
     init_arr = ['Trp53', '253_1_S6_L001_R1_001.fastq', '253_1_S6_L001_R2_001.fastq', 'CCTACACTTTCAGAATTTAATTTCCCTACTGGATGTCCCACCTTCTTTTTATTCTACCCTTTCCTATAAGCCATAGGGGTTTGTTTGTTTGTATGTTTTTTAATTGACAAGTTATGCATCCATACAGTACACAATCTCTTCTCTCTACAGATGACTGCCATGGAGGAGTCACAGTCGGATATCAGCCTCGAGCTCCCTCTGAGCCAGGAGACATTTTCAGGCTTATGGAAACTGTGAGTGGATCTT', 'TGCCATGGAGGAGTCACAGT']
+    print str(init_arr)
     run_crispresso.run_CRISPResso_fastq_r1_r2_w_flash(OUTPUT_PATH, FASTQ + init_arr[1], FASTQ + init_arr[2],
                                                       init_arr[3], init_arr[4])
+
+def run_solo_CRISPResso2_w_r1():
+    print 'run_solo_CRISPResso2_w_r1()'
+    run_crispresso = run_CRISPResso2.run_CRISPResso2()
+    init_arr = ['Trp53', '253_2_join.fq', '', 'CCTACACTTTCAGAATTTAATTTCCCTACTGGATGTCCCACCTTCTTTTTATTCTACCCTTTCCTATAAGCCATAGGGGTTTGTTTGTTTGTATGTTTTTTAATTGACAAGTTATGCATCCATACAGTACACAATCTCTTCTCTCTACAGATGACTGCCATGGAGGAGTCACAGTCGGATATCAGCCTCGAGCTCCCTCTGAGCCAGGAGACATTTTCAGGCTTATGGAAACTGTGAGTGGATCTT', 'TGCCATGGAGGAGTCACAGT']
+    print str(init_arr)
+    run_crispresso.run_CRISPResso_fastq_r1(OUTPUT_PATH, FASTQ + init_arr[1], init_arr[3], init_arr[4])
+
 
 
 if __name__ == '__main__':
     start_time = time.time()
     print("start >>>>>>>>>>>>>>>>>>")
-    # run_solo_CRISPResso2()
+    run_solo_CRISPResso2_w_r1()
     # multi_processing_plan_B()
     # multi_processing_plan_B_wo_gz()
-    multi_processing_plan_B_wo_gz_with_amplicon_min_alignment_score()
+    # multi_processing_plan_B_wo_gz_with_amplicon_min_alignment_score()
     print("::::::::::: %.2f seconds ::::::::::::::" % (time.time() - start_time))
