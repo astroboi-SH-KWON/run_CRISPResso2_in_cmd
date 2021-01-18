@@ -14,7 +14,8 @@ class run_CRISPResso2:
 
     def run_CRISPResso_fastq_r1(self, output_path, fastq_r1, amplicon_seq, guide_seq):
         os.system('CRISPResso --fastq_r1 {} -o {} --amplicon_seq {} --guide_seq {}'.
-                  format(fastq_r1, output_path + guide_seq, amplicon_seq.strip(), guide_seq.strip()))
+                  format(fastq_r1, output_path , amplicon_seq.strip(), guide_seq.strip()))
+                  # format(fastq_r1, output_path + guide_seq, amplicon_seq.strip(), guide_seq.strip()))
         return
 
     def run_CRISPResso_fastq_r1_r2_w_flash(self, output_path, fastq_r1, fastq_r2, amplicon_seq, guide_seq):
@@ -46,4 +47,9 @@ class run_CRISPResso2:
         os.system(
             'CRISPResso --fastq_r1 {} --fastq_r2 {} -o {} --amplicon_seq {} --guide_seq {} --amplicon_min_alignment_score {}'.format(
                 fastq_r1, fastq_r2, output_path + guide_seq, amplicon_seq.strip(), guide_seq.strip(), min_align_scr))
+        return
+
+    # conda install -c bioconda ea-utils
+    def join_fastq_by_ea_utils(self, fstq_r1, fstq_r2, ou_fl_nm):
+        os.system('fastq-join {} {} -o {}'.format(fstq_r1, fstq_r2, ou_fl_nm))
         return
