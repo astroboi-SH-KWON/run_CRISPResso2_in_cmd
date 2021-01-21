@@ -14,13 +14,18 @@ class run_CRISPResso2:
 
     def run_CRISPResso_fastq_r1(self, output_path, fastq_r1, amplicon_seq, guide_seq):
         os.system('CRISPResso --fastq_r1 {} -o {} --amplicon_seq {} --guide_seq {}'.
-                  format(fastq_r1, output_path , amplicon_seq.strip(), guide_seq.strip()))
+                  format(fastq_r1, output_path, amplicon_seq.strip(), guide_seq.strip()))
                   # format(fastq_r1, output_path + guide_seq, amplicon_seq.strip(), guide_seq.strip()))
+        return
+
+    def run_CRISPResso_fastq_r1_w_opt(self, output_path, fastq_r1, amplicon_seq, guide_seq, extr_opt):
+        os.system('CRISPResso --fastq_r1 {} -o {} --amplicon_seq {} --guide_seq {} {}'.
+                  format(fastq_r1, output_path, amplicon_seq.strip(), guide_seq.strip(), extr_opt))
         return
 
     def run_CRISPResso_fastq_r1_r2_w_flash(self, output_path, fastq_r1, fastq_r2, amplicon_seq, guide_seq):
         os.system('CRISPResso --fastq_r1 {} --fastq_r2 {} -o {} --amplicon_seq {} --guide_seq {}'.
-                  format(fastq_r1, fastq_r2, output_path + guide_seq, amplicon_seq.strip(), guide_seq.strip()))
+                  format(fastq_r1, fastq_r2, output_path, amplicon_seq.strip(), guide_seq.strip()))
         return
 
     """
@@ -30,7 +35,7 @@ class run_CRISPResso2:
     """
     def run_CRISPResso_fastq_r1_r2_w_flash_extra_opt(self, output_path, fastq_r1, fastq_r2, amplicon_seq, guide_seq, const):
         os.system('CRISPResso --fastq_r1 {} --fastq_r2 {} -o {} --amplicon_seq {} --guide_seq {} --prime_editing_pegRNA_scaffold_seq {}'.
-                  format(fastq_r1, fastq_r2, output_path + guide_seq, amplicon_seq.strip(), guide_seq.strip(), const))
+                  format(fastq_r1, fastq_r2, output_path, amplicon_seq.strip(), guide_seq.strip(), const))
         return
 
     """
@@ -46,7 +51,7 @@ class run_CRISPResso2:
     def run_CRISPResso_fastq_r1_r2_w_flash_for_large_indel(self, output_path, fastq_r1, fastq_r2, amplicon_seq, guide_seq, min_align_scr=60):
         os.system(
             'CRISPResso --fastq_r1 {} --fastq_r2 {} -o {} --amplicon_seq {} --guide_seq {} --amplicon_min_alignment_score {}'.format(
-                fastq_r1, fastq_r2, output_path + guide_seq, amplicon_seq.strip(), guide_seq.strip(), min_align_scr))
+                fastq_r1, fastq_r2, output_path, amplicon_seq.strip(), guide_seq.strip(), min_align_scr))
         return
 
     # conda install -c bioconda ea-utils
