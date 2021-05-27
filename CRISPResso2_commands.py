@@ -1,6 +1,5 @@
 import os
 
-
 class run_CRISPResso2:
     def __init__(self):
         pass
