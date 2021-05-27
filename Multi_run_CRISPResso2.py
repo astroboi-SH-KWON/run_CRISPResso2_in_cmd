@@ -5,7 +5,7 @@ from multiprocessing import Process
 
 
 import Util
-import run_CRISPResso2
+import CRISPResso2_commands
 ############### start to set env ###############
 WORK_DIR = os.getcwd() + "/"
 FASTQ = "FASTQ/"
@@ -18,7 +18,7 @@ TOTAL_CPU = mp.cpu_count()
 # MULTI_CNT = int(TOTAL_CPU*0.5)
 # MULTI_CNT = 5
 # PROCESS_NAME = "python"
-DELAY_MIN = 120
+DELAY_MIN = 60
 CONST1 = "AGTACGTACGAGTC"  # 14 bp
 CONST2 = "GTACTCGCAGTAGTC"  # 15 bp
 ############### end setting env ################
@@ -28,12 +28,17 @@ CONST2 = "GTACTCGCAGTAGTC"  # 15 bp
 def multi_join_fastq_by_ea_utils():
     print 'multi_join_fastq_by_ea_utils()'
     util = Util.Utils()
-    run_crispresso = run_CRISPResso2.run_CRISPResso2()
+    run_crispresso = CRISPResso2_commands.run_CRISPResso2()
 
     # read [[gene, fastq_r1, fastq_r2, amplicon_seq, guide_seq, output_path],
     #       ['Trp53', 'GE_327_Pool_S0_L001_R1_001.fastq', 'GE_327_Pool_S0_L001_R2_001.fastq', 'CCTACACTTTCAGAATTTAATTTCCCTACTGGATGTCCCACCTTCTTTTTATTCTACCCTTTCCTATAAGCCATAGGGGTTTGTTTGTTTGTATGTTTTTTAATTGACAAGTTATGCATCCATACAGTACACAATCTCTTCTCTCTACAGATGACTGCCATGGAGGAGTCACAGTCGGATATCAGCCTCGAGCTCCCTCTGAGCCAGGAGACATTTTCAGGCTTATGGAAACTGTGAGTGGATCTT', 'TGCCATGGAGGAGTCACAGT', '253_1_Trp53'], ...]
-    var_list = util.read_tb_txt_wout_header(WORK_DIR + INPUT_VAR_LIST)
-
+    # var_list = util.read_tb_txt_wout_header(WORK_DIR + INPUT_VAR_LIST)
+    var_list = [
+                ['', 'p53_wt_1.fq.gz', 'p53_wt_2.fq.gz']
+                , ['', 'p53_homo_KO_1.fq.gz', 'p53_homo_KO_2.fq.gz']
+                # , ['', 'MY_pig_PE2_1.fq', 'MY_pig_PE2_2.fq']
+                # , ['', 'MY_pig_PE1_1.fq', 'MY_pig_PE1_2.fq']
+                ]
     var_set = set()
     for val_arr in var_list:
         fstq_r1 = val_arr[1]
@@ -54,7 +59,7 @@ def multi_join_fastq_by_ea_utils():
 def multi_CRISPResso2_after_ea_utils_fastq_join():
     print 'multi_CRISPResso2_after_ea_utils_fastq_join()'
     util = Util.Utils()
-    run_crispresso = run_CRISPResso2.run_CRISPResso2()
+    run_crispresso = CRISPResso2_commands.run_CRISPResso2()
 
     # read [[gene, fastq_r1, fastq_r2, amplicon_seq, guide_seq, output_path],
     #       ['Trp53', 'GE_327_Pool_S0_L001_R1_001.fastq', 'GE_327_Pool_S0_L001_R2_001.fastq', 'CCTACACTTTCAGAATTTAATTTCCCTACTGGATGTCCCACCTTCTTTTTATTCTACCCTTTCCTATAAGCCATAGGGGTTTGTTTGTTTGTATGTTTTTTAATTGACAAGTTATGCATCCATACAGTACACAATCTCTTCTCTCTACAGATGACTGCCATGGAGGAGTCACAGTCGGATATCAGCCTCGAGCTCCCTCTGAGCCAGGAGACATTTTCAGGCTTATGGAAACTGTGAGTGGATCTT', 'TGCCATGGAGGAGTCACAGT', '253_1_Trp53'], ...]
@@ -69,7 +74,8 @@ def multi_CRISPResso2_after_ea_utils_fastq_join():
         guid_se = var_arr[4]
         out_path = var_arr[5].strip() + '/'
         proc = Process(target=run_crispresso.run_CRISPResso_fastq_r1,
-                       args=(OU + out_path, FASTQ + fstq_arr[0] + '_join.fastq', amp_seq, guid_se))
+                       # args=(OU + out_path, FASTQ + fstq_arr[0] + '_join.fastq', amp_seq, guid_se))
+                       args=(OU + out_path, FASTQ + fstq_arr[0] + '_join.fq', amp_seq, guid_se))
         proc.start()
         print fstq_r1
         time.sleep(60 * DELAY_MIN)
@@ -78,12 +84,14 @@ def multi_CRISPResso2_after_ea_utils_fastq_join():
 def multi_CRISPResso2_w_opt_after_ea_utils_fastq_join():
     print 'multi_CRISPResso2__w_opt_after_ea_utils_fastq_join()'
     util = Util.Utils()
-    run_crispresso = run_CRISPResso2.run_CRISPResso2()
+    run_crispresso = CRISPResso2_commands.run_CRISPResso2()
 
     # read [[gene, fastq_r1, fastq_r2, amplicon_seq, guide_seq, output_path],
     #       ['Trp53', 'GE_327_Pool_S0_L001_R1_001.fastq', 'GE_327_Pool_S0_L001_R2_001.fastq', 'CCTACACTTTCAGAATTTAATTTCCCTACTGGATGTCCCACCTTCTTTTTATTCTACCCTTTCCTATAAGCCATAGGGGTTTGTTTGTTTGTATGTTTTTTAATTGACAAGTTATGCATCCATACAGTACACAATCTCTTCTCTCTACAGATGACTGCCATGGAGGAGTCACAGTCGGATATCAGCCTCGAGCTCCCTCTGAGCCAGGAGACATTTTCAGGCTTATGGAAACTGTGAGTGGATCTT', 'TGCCATGGAGGAGTCACAGT', '253_1_Trp53'], ...]
     var_list = util.read_tb_txt_wout_header(WORK_DIR + INPUT_VAR_LIST)
 
+    opt = '-wc -17'  # 20210112 (default: -3)
+    # opt = '--trim_sequences --trimmomatic_options_string "ILLUMINACLIP:./input/NexteraPE-PE.fa:0:90:10:0:true LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36"'  # 20210128
     for var_arr in var_list:
         # gene_nm = var_arr[0]
         fstq_r1 = var_arr[1]
@@ -92,8 +100,11 @@ def multi_CRISPResso2_w_opt_after_ea_utils_fastq_join():
         amp_seq = var_arr[3]
         guid_se = var_arr[4]
         out_path = var_arr[5].strip() + '/'
+        if var_arr[6] == 'wc_default':  # '-wc_-3':
+            print 'var_arr[6] : ', var_arr[6]
+            opt = ''
         proc = Process(target=run_crispresso.run_CRISPResso_fastq_r1_w_opt,
-                       args=(OU + out_path, FASTQ + fstq_arr[0] + '_join.fastq', amp_seq, guid_se, '-wc -17'))
+                       args=(OU + out_path, FASTQ + fstq_arr[0] + '_join.fastq', amp_seq, guid_se, opt))
         proc.start()
         print fstq_r1
         time.sleep(60 * DELAY_MIN)
@@ -101,7 +112,7 @@ def multi_CRISPResso2_w_opt_after_ea_utils_fastq_join():
 
 def multi_processing_plan_B():
     util = Util.Utils()
-    run_crispresso = run_CRISPResso2.run_CRISPResso2()
+    run_crispresso = CRISPResso2_commands.run_CRISPResso2()
 
     # read [[gene, fastq_r1, fastq_r2, amplicon_seq, guide_seq],
     #       ['Trp53', 'GE_327_Pool_S0_L001_R1_001.fastq', 'GE_327_Pool_S0_L001_R2_001.fastq', 'CCTACACTTTCAGAATTTAATTTCCCTACTGGATGTCCCACCTTCTTTTTATTCTACCCTTTCCTATAAGCCATAGGGGTTTGTTTGTTTGTATGTTTTTTAATTGACAAGTTATGCATCCATACAGTACACAATCTCTTCTCTCTACAGATGACTGCCATGGAGGAGTCACAGTCGGATATCAGCCTCGAGCTCCCTCTGAGCCAGGAGACATTTTCAGGCTTATGGAAACTGTGAGTGGATCTT', 'TGCCATGGAGGAGTCACAGT'], ...]
@@ -123,7 +134,7 @@ def multi_processing_plan_B():
 def multi_processing_plan_B_wo_gz():
     print 'multi_processing_plan_B_wo_gz(): extract FASTQ files without .gz ext'
     util = Util.Utils()
-    run_crispresso = run_CRISPResso2.run_CRISPResso2()
+    run_crispresso = CRISPResso2_commands.run_CRISPResso2()
 
     # read [[gene, fastq_r1, fastq_r2, amplicon_seq, guide_seq],
     #       ['Trp53', 'GE_327_Pool_S0_L001_R1_001.fastq', 'GE_327_Pool_S0_L001_R2_001.fastq', 'CCTACACTTTCAGAATTTAATTTCCCTACTGGATGTCCCACCTTCTTTTTATTCTACCCTTTCCTATAAGCCATAGGGGTTTGTTTGTTTGTATGTTTTTTAATTGACAAGTTATGCATCCATACAGTACACAATCTCTTCTCTCTACAGATGACTGCCATGGAGGAGTCACAGTCGGATATCAGCCTCGAGCTCCCTCTGAGCCAGGAGACATTTTCAGGCTTATGGAAACTGTGAGTGGATCTT', 'TGCCATGGAGGAGTCACAGT'], ...]
@@ -146,7 +157,7 @@ def multi_processing_plan_B_wo_gz():
 def multi_processing_plan_B_wo_gz_with_amplicon_min_alignment_score():
     print 'multi_processing_plan_B_wo_gz(): extract FASTQ files without .gz ext'
     util = Util.Utils()
-    run_crispresso = run_CRISPResso2.run_CRISPResso2()
+    run_crispresso = CRISPResso2_commands.run_CRISPResso2()
 
     # read [[gene, fastq_r1, fastq_r2, amplicon_seq, guide_seq],
     #       ['Trp53', 'GE_327_Pool_S0_L001_R1_001.fastq', 'GE_327_Pool_S0_L001_R2_001.fastq', 'CCTACACTTTCAGAATTTAATTTCCCTACTGGATGTCCCACCTTCTTTTTATTCTACCCTTTCCTATAAGCCATAGGGGTTTGTTTGTTTGTATGTTTTTTAATTGACAAGTTATGCATCCATACAGTACACAATCTCTTCTCTCTACAGATGACTGCCATGGAGGAGTCACAGTCGGATATCAGCCTCGAGCTCCCTCTGAGCCAGGAGACATTTTCAGGCTTATGGAAACTGTGAGTGGATCTT', 'TGCCATGGAGGAGTCACAGT'], ...]
@@ -166,7 +177,7 @@ def multi_processing_plan_B_wo_gz_with_amplicon_min_alignment_score():
 
 def multi_processing_plan_C():
     util = Util.Utils()
-    run_crispresso = run_CRISPResso2.run_CRISPResso2()
+    run_crispresso = CRISPResso2_commands.run_CRISPResso2()
 
     # read [[gene, fastq_r1, fastq_r2, amplicon_seq, guide_seq],
     #       ['Trp53', 'GE_327_Pool_S0_L001_R1_001.fastq', 'GE_327_Pool_S0_L001_R2_001.fastq', 'CCTACACTTTCAGAATTTAATTTCCCTACTGGATGTCCCACCTTCTTTTTATTCTACCCTTTCCTATAAGCCATAGGGGTTTGTTTGTTTGTATGTTTTTTAATTGACAAGTTATGCATCCATACAGTACACAATCTCTTCTCTCTACAGATGACTGCCATGGAGGAGTCACAGTCGGATATCAGCCTCGAGCTCCCTCTGAGCCAGGAGACATTTTCAGGCTTATGGAAACTGTGAGTGGATCTT', 'TGCCATGGAGGAGTCACAGT'], ...]
@@ -186,7 +197,7 @@ def multi_processing_plan_C():
 
 def run_solo_CRISPResso2_w_flash():
     print 'run_solo_CRISPResso2_w_flash()'
-    run_crispresso = run_CRISPResso2.run_CRISPResso2()
+    run_crispresso = CRISPResso2_commands.run_CRISPResso2()
     var_arr = ['Trp53', '253_1_S6_L001_R1_001.fastq', '253_1_S6_L001_R2_001.fastq', 'CCTACACTTTCAGAATTTAATTTCCCTACTGGATGTCCCACCTTCTTTTTATTCTACCCTTTCCTATAAGCCATAGGGGTTTGTTTGTTTGTATGTTTTTTAATTGACAAGTTATGCATCCATACAGTACACAATCTCTTCTCTCTACAGATGACTGCCATGGAGGAGTCACAGTCGGATATCAGCCTCGAGCTCCCTCTGAGCCAGGAGACATTTTCAGGCTTATGGAAACTGTGAGTGGATCTT', 'TGCCATGGAGGAGTCACAGT', 'Trp53_253_1_S6_L001_R1_001']
     print str(var_arr)
     fstq_r1 = var_arr[1]
@@ -199,7 +210,7 @@ def run_solo_CRISPResso2_w_flash():
 
 def run_solo_CRISPResso2_w_r1():
     print 'run_solo_CRISPResso2_w_r1()'
-    run_crispresso = run_CRISPResso2.run_CRISPResso2()
+    run_crispresso = CRISPResso2_commands.run_CRISPResso2()
     var_arr = ['Trp53', '253_2_join.fq', '', 'CCTACACTTTCAGAATTTAATTTCCCTACTGGATGTCCCACCTTCTTTTTATTCTACCCTTTCCTATAAGCCATAGGGGTTTGTTTGTTTGTATGTTTTTTAATTGACAAGTTATGCATCCATACAGTACACAATCTCTTCTCTCTACAGATGACTGCCATGGAGGAGTCACAGTCGGATATCAGCCTCGAGCTCCCTCTGAGCCAGGAGACATTTTCAGGCTTATGGAAACTGTGAGTGGATCTT', 'TGCCATGGAGGAGTCACAGT', 'Trp53_253_2_join']
     print str(var_arr)
     fstq_r1 = var_arr[1]
@@ -215,8 +226,8 @@ if __name__ == '__main__':
     print("start >>>>>>>>>>>>>>>>>>")
     # # st by ea-utils
     # multi_join_fastq_by_ea_utils()
-    # multi_CRISPResso2_after_ea_utils_fastq_join()
-    multi_CRISPResso2_w_opt_after_ea_utils_fastq_join()
+    multi_CRISPResso2_after_ea_utils_fastq_join()
+    # multi_CRISPResso2_w_opt_after_ea_utils_fastq_join()
     # # en by ea-utils
     # run_solo_CRISPResso2_w_r1()
     # multi_processing_plan_B()
